@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LöwenChat</title>
+    <link rel="stylesheet" type="text/css" href="Styles.css" />
+    <link rel="icon" type="image/png" href="pictures/web-icon.png" />
+  </head>
+  <body>
+    <div id="logo-container">
+      <img src="pictures/web-icon.png" alt="Chatbot Logo" id="chatbot-logo" />
+      <h1 id="chatbot-name">LöwenChat</h1>
+    </div>
+    <div id="selection-window" class="selection-window">
+      <div class="main-title">Was darf der Löwe für dich tun?</div>
+      <select id="response-type" class="dropdown">
+        <option value="chat">Einfach Chatten</option>
+        <option value="funny">Lustige Geschichten Generieren</option>
+        <option value="sad">Traurige Geschichten Generieren</option>
+        <option value="informative">Thema Einfache Erklären</option>
+        <option value="correction">Text Korrigieren</option>
+      </select>
+      <button id="start-button" class="start-button">Starten</button>
+    </div>
+
+    <div id="chat-window" style="display: none;">
+      <div class="main-title" id="chat-title">LöwenChat</div>
+      
+      <div id="chat-messages"></div>
+      
+      <form id="chat-form">
+        <input
+          type="text"
+          id="chat-input"
+          autocomplete="off"
+          placeholder="Der Löwe erwartet deine Nachricht..."
+          required
+        />
+        <button type="submit">Senden</button>
+        <button type="button" id="speech-button">🎤</button>
+      </form>
+
+      <button id="back-button" class="back-button">Zurück</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.3/axios.min.js"></script>
+    <script src="Functions.js"></script>
+  </body>
+</html>
