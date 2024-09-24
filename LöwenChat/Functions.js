@@ -259,7 +259,7 @@ form.addEventListener("submit", async (e) => {
     addBotMessage(chatbotResponse); 
   } catch (error) {
     console.error("Fehler bei der Kommunikation mit der OpenAI API:", error);
-    
+    botMessagePlaceholder.remove();
     botMessagePlaceholder.classList.remove("blinking");
     addBotMessage("Oops! Etwas ist schiefgelaufen. Bitte versuche es später erneut.");
   }
